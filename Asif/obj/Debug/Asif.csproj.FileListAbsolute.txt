@@ -1,0 +1,6 @@
+D:\gitrepo\Asif\Asif\bin\Debug\Asif.exe.config
+D:\gitrepo\Asif\Asif\bin\Debug\Asif.exe
+D:\gitrepo\Asif\Asif\bin\Debug\Asif.pdb
+D:\gitrepo\Asif\Asif\obj\Debug\Asif.csprojResolveAssemblyReference.cache
+D:\gitrepo\Asif\Asif\obj\Debug\Asif.exe
+D:\gitrepo\Asif\Asif\obj\Debug\Asif.pdb

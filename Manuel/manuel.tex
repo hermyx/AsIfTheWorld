@@ -1,0 +1,106 @@
+%this file is the IVM article analysis
+%a % comment anything after % until the end of the line
+%minimum references to begin our article
+\documentclass[18pt]{article}
+\let\myBib\thebibliography
+\let\endmyBib\endthebibliography
+\renewcommand\thebibliography[1]{\ifx\relax#1\relax\else\myBib{#1}\fi}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage[margin=1in]{geometry}
+\usepackage{indentfirst}
+\usepackage{titlesec}
+\newcommand{\sectionbreak}{\clearpage}
+
+%presentation of the document
+\title{Manuel : As if the world wasn't ending}
+\author{Mikaïl \textsc{Demirdelen}\\ Olivir \textsc{Frischo}\\ Julien \textsc{Bouvet}}
+\date{14/11/2015}
+\setlength\parindent{50pt}
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+Cette section explique le principe du jeu. 
+En gros, on possède un groupe de gens qu'on doit faire aller d'un point d'une map à un autre.
+\subsection{Déroulement d'une partie}
+Au début, chaque personnage se trouve sur une partie de la Tile de commencement. A chaque tour, chaque personnage a le droit de faire une action. Cette action peut être :
+\begin{itemize}
+  \item Se reposer.
+  \item Se cacher.
+  \item Parler avec.
+  \item Se déplacer.
+  \item Crier.
+  \item ...
+\end{itemize}
+Le joueur décide de manière séquentielle chaque action faite par ses personnages. Ensuite, pendant le tour des zombis, ceux-ci font automatiquement des actions selon celles-ci :
+personnage a le droit de faire une action. Cette action peut être :
+\begin{itemize}
+  \item Ne rien faire.
+  \item Se diriger vers le bruit.
+  \item Se diriger vers la lumière (pour les égouts ou la nuit).
+  \item ...
+\end{itemize}
+
+\section{Personnages}
+\subsection{Caractéristiques}
+\subsection{Classes de personnages}
+\subsection{Personnages de commencement}
+\subsection{PNJ}
+\subsubsection{PNJ recrutables}
+\subsubsection{PNJ mauvais}
+
+\section{Zombis}
+\subsection{Caractéristiques des zombis}
+\subsection{Type d'action face aux zombis}
+Il y aura 2 types d'actions supplémentaire qu'un personnage peut faire s'il se trouve sur la même partie de tile qu'un zombi :
+\begin{itemize}
+  \item Fuir.
+  \item Attaquer.
+\end{itemize}
+\subsubsection{Points de fatigue}
+A chaque action, le personnage faisant cette action gagne un point de fatigue.
+Un personnage perds ses points de fatigue en ne faisant rien.
+\subsection{Types de zombis}
+Il y aura 5 types de zombis :
+\begin{itemize}
+  \item Les zombis faibles : ils sont simples à vaincre mais sont forts en horde.
+  \item Les zombis rapides : ils sont simples à vaincre mais sont difficiles à fuir.
+  \item Les zombis forts : ils sont difficiles à vaincre mais peuvent être fuit facilement.
+  \item Les zombis infectés : ils ont les même stats que les zombis faibles mais transforment en zombis directement.
+  \item Les zombis boss : ils sont forts et rapides, mais ne sont jamais en horde.
+\end{itemize}
+\section{Combats}
+\subsection{Attaque par le joueur}
+\subsection{Attaque par le zombi}
+
+\section{Map}
+Une map est composée de tiles carrées. Chaque tile possède 5 parties : Centre, Nord, Sud, Est et Ouest.
+\subsection{Types de tiles et sorties}
+Il y aura XX types de maps :
+\begin{itemize}
+  \item Street : Les sorties se font sur les cotés opposés (Nord -> Sud).
+  \item Building : Les sorties se font sur le même côté (Nord -> Nord).
+  \item Egouts : Certaines parties de la tile ne seront pas praticables (dû à l'eau).
+\end{itemize}
+\subsection{Tailles de maps}
+Il y aura 3 types de maps :
+\begin{itemize}
+  \item Petite : Les maps de début de jeu. Elles feront 8x8 tiles. Elles ne comporteront qu'un seul niveau.
+  \item Moyenne : Les maps feront 15x15 tiles. Elles comporteront deux niveaux.
+  \item Grande : Les maps feront 20x20 tiles. Elles comporteront trois niveaux ou plus.
+\end{itemize}
+\subsection{Interaction entre la map et les personnages}
+
+
+
+
+\bibliography{bibliography}
+\bibliographystyle{plain}
+
+\end{document}
