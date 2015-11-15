@@ -1,0 +1,45 @@
+\section{Introduction}
+Cette section explique le principe du jeu. 
+Le joueur possède un groupe de gens qu'il doit utiliser pour faire des missions. Celles-ci peuvent être : Aller à un endroit de la carte, récupérer tel ou tel objet, etc. Il devra faire face à une horde de zombis qui feront tout pour se nourrir. Le joueur devra donner des ordres à ses personnages afin d'attaquer les zombis solitaires ou encore d'explorer les bâtiments désertés afin de remplir au mieux sa mission. Le jeu se déroule en tour par tour des QTE peuvent arriver.
+\\\\
+Il existera plusieurs modes de jeux : Histoire et Arcade.
+\begin{itemize}
+  \item Histoire : Le joueur suivra un scénario plus ou moins flexible en fonction de ses choix. Il commencera avec un nombre de personnage prédéfini fixé.
+  \item Arcade : La carte, l'objectif, l'équipe de début ainsi que les différents événements QTE seront générés aléatoirement. Le but du jeu est alors de réussir l'objectif sans aucune connaissance du terrain, et le plus rapidement possible. \textbf{(à revoir)}
+\end{itemize}
+La suite des sections parlera principalement du mode Histoire. Certaines données pourront être modifiées dans le mode Arcade. \textbf{(à revoir)}
+\subsection{Missions, quêtes principales et annexes}
+Le jeu comporte plusieurs missions. Chaque mission se passe sur une carte délimitée, contenue au sein d'une carte globale. Au sein d'une mission, le joueur peut avoir plusieurs quêtes. 
+\\\\
+Il peut avoir une quête principale lui donnant un objectif précis. Par exemple : "Trouvez un explosif". Il peut avoir une quête principale lui donnant un objectif flou. Par exemple : "Sortez de la carte". Les sorties n'étant pas précisément connues par le joueur en début de partie. De même, il pourra aussi emprunter plusieurs sorties.
+\\\\
+Le joueur peut aussi avoir des quêtes annexes. Celles-ci permettent de récupérer un personnage dans l'équipe, ou de provoquer un événement à l'échelle de la carte locale. Généralement, elles proposées par des PNJ (voir section PNJ).
+\subsection{Déroulement d'une mission}
+Au début d'une mission, le joueur doit décider du nombre de personnage qu'il décide d'utiliser. Il ne doit pas dépasser un seuil fixé par le jeu mais peut en sélectionner moins s'il le souhaite. Les joueurs non utilisés restent au camp de base et peuvent être utilisés lors de quêtes QTE(voir section QTE).
+\\\\
+Un tour se déroule de manière classique : Le joueur décide de faire faire une action à chacun de ses personnages, puis les zombis font leur action. Chaque personnage a le droit de faire une action. Cette action est comprise parmi cette liste non exhaustive :
+\begin{itemize}
+  \item Se reposer.
+  \item Se cacher.
+  \item Parler avec.
+  \item Se déplacer : un personnage peut se déplacer d'un nombre de case égal au nombre de point de mouvement qu'il possède.
+  \item Fouiller meuble
+  \item Ouvrir porte.
+  \item Fermer porte.
+  \item Lancer objet.
+  \item Tirer au pistolet.
+  \item Tirer à l'arc.
+  \item Crier.
+  \item ...
+\end{itemize}
+Les actions peuvent avoir des portées différentes parmi 3. Les actions de mêlée sont des actions faisable uniquement si le personnage et la cible sont sur la même case de la carte. Les actions proches peuvent être faites si la distance entre le personnage et la cible est de 1. Les actions à distance peuvent être faites si cette distance est inférieure à la portée de l'action.
+\\\\
+Le joueur décide de manière séquentielle chaque action faite par ses personnages. Autrement dit, il sélectionne un personnage de son choix, lui fait faire une action, sélectionne un autre personnage, lui fait faire une action, et ainsi de suite, jusqu'à ce qu'il ne lui reste plus de personnage.
+\\\\
+Ensuite, pendant le tour des zombis, ceux-ci font automatiquement des actions parmi celles-ci :
+\begin{itemize}
+  \item Ne rien faire.
+  \item Se diriger vers le bruit.
+  \item Se diriger vers la lumière (pour les égouts ou la nuit).
+  \item ...
+\end{itemize}

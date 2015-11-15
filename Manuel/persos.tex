@@ -1,0 +1,56 @@
+\section{Personnages}
+Lors du jeu, le joueur contrôle donc de nombreux personnages. Les sections suivantes présentent donc la gestion numérique de ceux-ci.
+\subsection{Caractéristiques}
+Un personnage possède de nombreux attributs ou caractéristiques :
+\begin{itemize}
+  \item Vie : Sa vie est une structure de données comportant 5 cases : Une pour le tronc et la tête, une pour le bras gauche, une pour le bras droit, une pour la jambe gauche, une pour la jambe droite. Chaque membre possède un nombre de point de vie égal à la constitution. Un membre avec ses tous points de vie a peut être utilisé normalement. Un membre avec moins de points de vie procure un malus au personnage. Un membre sans point de vie est inutilisable.
+  \item Age : Valeur désignant l'âge d'un personnage. Peut aller de 10 à 90. Est utilisé pour les relations entre les personnages.
+  \item Genre : Valeur désignant le sexe d'un personnage. Peut aller de 10 à 90. Est utilisé pour les relations entre les personnages.
+  \item Gaucherie : Définit si le personnage est gaucher ou droitier. Cela est utilisée pour accorder un malus de réussite si le personnage utilise un objet de la mauvaise main. Par défaut, il utilise tous les objets de la bonne main, mais si celle-ci est rendu inutilisable suite à un combat, par exemple, il devra les utiliser de la mauvaise. La gaucherie est définie par un nombre allant de 0 à 2, 0 étant pour droitier, 1 pour ambidextre et 2 pour gaucher.
+  \item Force : Valeur représentant la force pure d'un personnage. Elle peut varier entre 10 et 39.
+  \item Constitution : Valeur représentant la résistance des membres d'un personnage. Elle peut varier entre 1 et 4.
+  \item Vitesse : Valeur représentant la vitesse d'un personnage. Elle varie de 10 à 39.
+  \item Mouvement : Valeur représentant directement la capacité de mouvement d'un personnage. Elle varie entre 0 et 3, et sa valeur maximale correspond à la vitesse du personnage divisée par 10, et tronquée à l'unité.
+  \item Agilité : Valeur représentant la facilité qu'a un personnage à escalader des murs ou esquiver les ennemis. Cette valeur est comprise entre 0 et 9.
+  \item Réflexes : Valeur représentant la rapidité de réaction d'un personnage. Elle est comprise entre 0 et 9. Si elle est élevée elle permet d'avoir au joueur plus de temps lors d'un événement QTE concernant le personnage.
+  \item Santé mentale : Valeur représentant la santé mentale d'un personnage. Pour plus de détail sur sa gestion voir la section concernée. Elle varie entre 0 et 100 mais démarre à une valeur différente selon les personnages.
+  \item Stress : Valeur dynamique liée au courage. Elle varie entre 0 et 100. Elle influe directement les caractéristiques physiques du personnage et peut le faire refuser une mission risquée, ou freezer de peur. Pour plus de détails, voir la section concernée.
+  \item Fatigue : Valeur représentant la fatigue d'un personnage. Elle commence à 0 et augmente à chaque action (idem, plus de détails, section concernée) ayant pour limite Max(Force, Vitesse).
+\end{itemize}
+
+\subsection{Habiletés des personnages}
+Un personnage peut posséder un certain nombre de capacités d'actions appelée Habiletés. Celles-ci peuvent jouer sur les statistiques du personnage et/ou de son entourage, permettre l'utilisation par le personnage de certains objets, ou permettent de nouvelles actions au joueur. Chaque habileté possède un poids utilisé dans le calcul de l'équilibre (voir section concernée) compris entre 0 et 9. Ci dessous une liste exhaustive des habiletés avec leurs poids entre parenthèses :
+\begin{itemize}
+  \item Chimiste(4) : Le personnage peut identifier les médicaments. Il permet donc au joueur de savoir quel médicament récupérer ou utiliser \textbf{(Action : Infos médicament)}. Il peut aussi créer des bombes, produits, cocktails molotovs, si besoin.
+  \item Policier(8) : Le personnage peut utiliser des armes à feu. Il possède aussi la compétence de calmer légèrement son entourage.
+  \item Politicien(9) : Le personnage a une bonne manipulation du langage. Il peut donc calmer (stress), motiver (courage) et limiter la perte de santé mentale de son entourage.
+  \item Électricien(4) : Le personnage peut manipuler toute sorte d'objet électrique (réseau, disjoncteur \textbf{(?)}, fusibles, etc.).
+  \item Cambrioleur(5) : Le personnage peut crocheter tout type de serrure. Il possède un grand sens de la concentration et peut effectuer des tâches très précises \textbf{(si on le mets dans le jeu, diminution du facteur échec critique ... auquel cas, \emph{augmenter le poids})}.
+  \item Leadeur(7) : Le personnage a une expérience de gestion de groupe et sait comment donner le meilleur d'un groupe. Il peut faire réaliser cela à son entourage et donc augmenter son altruisme (à l'entourage). Il a des connaissances très diverses et possède du bon sens. Il peut donc permettre au joueur d'avoir des conseils de bon sens sur la mission en cours \textbf{(Action : Conseil bon sens)}.
+  \item Ingénieur/Bricoleur(5) : Le personnage peut construire un objet élaboré à partir de deux éléments "atomiques" \textbf{(à voir pour l'implémentation de celui là ...)}.
+  \item Musicien(6) : Le personnage a une bonne expérience de la musique : il est très sensible au son. Il peut donc entendre les zombis depuis une plus grande distance.
+  \item Athlète(5) : Le personnage est habitué aux efforts physiques intenses : il gagne donc moins vite sa fatigue. De plus, il a en général de bonnes stats physique mais aussi en sensibilité.
+  \item Chasseur(3) : Le personnage est habitué à la chasse, il peut donc traquer un zombi ou un PNJ. Il peut  aider le joueur à trouver la direction d'une cible vivante (zombi ou PNJ) \textbf{(Action : Traque direction cible)}. Il peut aussi être capable d'utiliser arc.
+\end{itemize}
+\subsection{Psychologie des personnages}
+Un personnage peut posséder plusieurs attributs qui influent sa manière de réagir indépendamment du contrôle du joueur. L'ensemble de ses attributs s'appelle la psychologie du personnage. Chaque personnage possède une valeur, comprise entre 0 et 9, pour chacun de ses attributs. Ces attributs sont :
+\begin{itemize}
+  \item Altruisme : Décide à quel point le personnage est près à aider quelqu'un d'autre. Cet attribut va influencer le courage d'un personnage en fonction de si sa quête le concerne, concerne le groupe ou concerne seulement un ou plusieurs individus (personnages ou PNJ) dont il ne fait pas partie. Un personnage égoïste (0 en altruisme) préfère donc les missions qui concerne directement sa personne. Il peut aussi être concerné par les personnes avec qui il a des liens forts d'amitiés ou d'amour. 
+  \item Courage : Valeur représentant le Courage d'un personnage. Elle est statique et va influer la capacité d'un personnage à faire des actions risquées, à freezer de peur, etc. Elle est comprise entre 0 et 9. Pour plus de détails, voir la section concernée.
+  \item Sensibilité : Valeur représentant la capacité d'un personnage à perdre/gagner plus ou moins vite sa santé mentale. De même, voir la section concernée pour plus de détails sur sa gestion. Elle varie entre 0 et 9.
+  \item Gentillesse\textbf{(?)} : Valeur représentant la gentillesse d'un personnage. Elle est comprise entre 0 et 9 et va influer sa facilité à créer des relations sociales avec d'autres personnages.
+  \item Compatibilité : Valeur comprise entre 0 et 9 et représentant le type de personnalité que le personnage possède. Elle va permettre à un personnage de créer une relation plus facilement avec un autre personnage ayant une compatibilité similaire. La valeur est circulaire, c'est-à-dire que le 9 est considéré près du 0.
+\end{itemize} 
+\subsection{Relations entre les personnages}
+Les personnages peuvent créer des relations entre eux. Cela se traduit par une affinité à vouloir rester près de ces personnes. En faisant rester les personnes liées ensemble, elles peuvent gagner des bonus dans certaines stats, en fonction du type de relation existant entre elles. Les relations sont de trois types : 
+\begin{itemize}
+  \item Affinité/Confiance : Peut se créer entre tous les personnages. Un point de confiance se gagne de manière proportionnelle au nombre de tour où les deux personnages sont à côté. Il est aussi lié à l'altruisme des personnages concernés.
+  \item Relation amicale : Peut se créer entre tous personnages ayant une compatibilité proche. Un point de relation amical se gagne de manière proportionnelle au nombre de tour où les deux personnages sont à côté et à la confiance entre eux. La gentillesse des personnage influe aussi sur cette caractéristique. Des points peuvent aussi être gagnés via certaines actions \textbf{(à voir)}. 
+    \item Relation amoureuse : Ne peut se créer qu'entre un homme et une femme dont l'âge et la compatibilité sont proches. Un point de relation amoureuse se gagne de manière proportionnelle au nombre de tour où les deux personnages sont à côté et à la confiance entre eux. La gentillesse des personnages influe aussi sur cette caractéristique. Des points peuvent aussi être gagnés via certaines actions (si un personnage en sauve un autre, par exemple). 
+\end{itemize}
+Chacun de ses type est une valeur numérique comprise entre 0 et 99. A chaque fin de tour, les points sont ajoutés si les conditions sont remplis. \textbf{Note : Formule à écrire.} Deux personnages peuvent aussi perdre en confiance s'ils sont éloignés depuis trop longtemps. Ils peuvent aussi perdre des points de chaque type de relation si, par exemple, le premier personnage abandonne le deuxième face à des zombis ou qu'il fait un "nervous breakdown" et qu'il se mets à perdre la boule. \textbf{(partie à retravailler, globalement).}
+\subsection{Équilibre entre les personnages}
+\subsection{Personnages de début}
+\subsection{PNJ}
+\subsubsection{PNJ recrutables}
+\subsubsection{PNJ mauvais}
