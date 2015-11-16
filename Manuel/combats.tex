@@ -1,4 +1,37 @@
 \section{Combats}
-\subsection{Attaque par le joueur}
+Un combat est déclenché de deux manières. Soit un personnage peut attaquer un zombi, soit un zombi peut attaquer un personnage. Plusieurs personnages peuvent attaquer une entité (humaine ou zombie).
+\subsection{Attaque par le personnage}
+L'attaque par le joueur est décidée par le joueur. Celui-ci sélectionne un personnage et sa cible. L'attaque fonctionne si la cible se trouve à portée de l'arme utilisée par le joueur.\\
+L'attaque réussit si la condition suivante est remplie : Chance > 0.03}
+Chance définit l'échec critique de cette manière : \textbf{Chance = [(Rand(BonusPers+BonusTerrain)*33/(Stress)]}
+\\\\
+Notons un nombre aléatoire entre 0 et 1, ayant au moins une précision au centième Y. La fonction \textbf{Rand(x)} est égale à :\\
+\textbf{if (y+x > 0.99) then return 0.99\\
+else is (y+x < 0) then return 0\\
+else return y+x.}
+\\\\
+Avec cette définition, et sans bonus, un personnage ayant un stress maximum possède toujours 91\% de chances de réussir son attaque. S'il possède 74 de stress, il aura 94\% de chances de réussir. S'il possède 49 de stress, la probabilité de réussir monte à 96\% et enfin, avec 24 de stress, il arrive à 98\% de chances de réussir. Tant qu'il n'a pas 10 de stress, il réussira tous ses coups.
+\\\\
+Le bonus permet donc d'augmenter ses chances. Il peut être positif, comme par exemple avec l'effet du Cambrioleur (+0.04), mais il peut être négatif avec des malus de terrain (environ -0.01 ou -0.02).
+\\\\
+L'attaque du personnage se définit de cette manière : \textbf{AttaquePerso = ForceArme - (StressAttaquant/20) - (Fatigue/20)}.\\
+ForceArme est la puissance de l'arme. Pour une arme à distance, elle ne dépendra que de la force de l'arme pure. Pour une arme de corps-à-corps, elle dépendra de la Force du personnage + d'une force intrinsèque à l'arme. Par défaut, le joueur possède ses poings comme arme. Dans ce cas, ForceArme = Force du personnage. A priori, AttaquePerso serait aurait en moyenne une valeur entre 4 et 10.
+\\\\
+Ensuite, ce terme est encore déduit d'une capacité de défense de cette manière: Dégâts=AttaquePerso-Défense.
+\\\\
+Si le défenseur est un zombi, alors \textbf{Defense = 0}. Le personnage inflige donc un nombre de blessures au défenseur égal à AttaquePerso. Si le zombi n'a plus de vie alors il meurt.
+\\\\
+Si le défenseur est un humain contrôlé par le joueur, alors celui-ci décide la partie du corps qu'il veut attaquer. Sinon, la partie attaquée est choisie aléatoirement. Dans ces cas là, \textbf{Defense = 2 * Constitution + Bonus - (Fatigue/20)}.
+\\\\
+De même, Défense serait en général compris entre 4 et 10. Le terme Bonus peut être du à un objet (comme un bouclier, par exemple). Si un tel objet est utilisé, il prends un nombre de dégât égal à DégatObjet = TronqueUnite(AttaquePerso/DefenseObjet) ( \textbf{Ces formules sont à équilibrer.}
 \subsection{Attaque par le zombi}
-
+L'attaque par le zombi est faite automatiquement lors de leur tour. Chaque zombi attaque le personnage le plus proche de lui. Un zombi ne peut pas attaquer un autre zombi. Un zombi ne peut attaquer un joueur que s'il se trouve sur la même tile que lui.\\\\
+La condition de réussite d'une attaque zombi est : \textbf{ChanceZombi + BonusTerrain > 0.03 }
+avec \textbf{ChanceZombi = [Rand()*(PrecisionZombi/AgilitéCible)]}\\\\.
+Cela signifie qu'un zombi moyen de 3 de précision aura 99\% de chances de réussir son attaque contre un personnage ayant 1 d'agilité et 10\% de chances contre un avec 10 d'agilité. Un zombi avec 5 de précision réussira toutes ses attaques contre un personnage avec 1 point d'agilité. Contre un humain avec 2 d'agilité, il aura 98\% de chances de réussi son attaque, et contre un humain avec 10 d'agilité, il aura 94\% de chances de réussir son attaque. Dans ce cas, Bonus correspond au bonus de terrains pouvant faire perdre de la chance.
+\\\\
+Un zombi attaque aléatoirement un membre de l'humain. Il inflige à cette partie du corps un nombre de dégat égal à : \textbf{AttaqueZombi = Attaque}. Attaque étant le nombre de point d'attaque du zombi attaquant.
+\\\\
+De la même manière que précédemment, ce terme est déduit d'un terme défensif. Dégâts = AttaqueZombi - Défense.
+\\\\
+Le personnage possède donc une défense telle que : Défense = Bonus. Le terme bonus est le même que pour celui de la partie précédente. Cependant, dans ce cas, les dégâts de l'objets défensif utilisé sont calculés de cette manière : DégatsObjet = AttaqueZombi.

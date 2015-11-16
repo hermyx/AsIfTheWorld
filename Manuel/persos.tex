@@ -7,15 +7,18 @@ Un personnage possède de nombreux attributs ou caractéristiques :
   \item Age : Valeur désignant l'âge d'un personnage. Peut aller de 10 à 90. Est utilisé pour les relations entre les personnages.
   \item Genre : Valeur désignant le sexe d'un personnage. Peut aller de 10 à 90. Est utilisé pour les relations entre les personnages.
   \item Gaucherie : Définit si le personnage est gaucher ou droitier. Cela est utilisée pour accorder un malus de réussite si le personnage utilise un objet de la mauvaise main. Par défaut, il utilise tous les objets de la bonne main, mais si celle-ci est rendu inutilisable suite à un combat, par exemple, il devra les utiliser de la mauvaise. La gaucherie est définie par un nombre allant de 0 à 2, 0 étant pour droitier, 1 pour ambidextre et 2 pour gaucher.
-  \item Force : Valeur représentant la force pure d'un personnage. Elle peut varier entre 10 et 39.
+  \item Force : Valeur représentant la force pure d'un personnage. Elle peut varier entre 1 et 10.
   \item Constitution : Valeur représentant la résistance des membres d'un personnage. Elle peut varier entre 1 et 4.
+  \item Capacité : Valeur représentant le nombre d'objet d'équipement que peut transporter un personnage. La capacité, notée C, est calculée de telle manière : C = 2*Force +  5*Consitution. C peut donc varier entre 10 et 40.
   \item Vitesse : Valeur représentant la vitesse d'un personnage. Elle varie de 10 à 39.
   \item Mouvement : Valeur représentant directement la capacité de mouvement d'un personnage. Elle varie entre 0 et 3, et sa valeur maximale correspond à la vitesse du personnage divisée par 10, et tronquée à l'unité.
-  \item Agilité : Valeur représentant la facilité qu'a un personnage à escalader des murs ou esquiver les ennemis. Cette valeur est comprise entre 0 et 9.
-  \item Réflexes : Valeur représentant la rapidité de réaction d'un personnage. Elle est comprise entre 0 et 9. Si elle est élevée elle permet d'avoir au joueur plus de temps lors d'un événement QTE concernant le personnage.
+  \item Action : Valeur dynamique ayant une valeur maximale de 1 pour tous les personnages. Elle permet d'effectuer une action quelconque. Cette valeur reprends sa valeur maximale en chaque début de tour (du joueur).
+  \item Agilité : Valeur représentant la facilité qu'a un personnage à escalader des murs ou esquiver les ennemis. Cette valeur est comprise entre 1 et 10.
+  \item Réflexes : Valeur représentant la rapidité de réaction d'un personnage. Elle est comprise entre 1 et 10. Si elle est élevée elle permet d'avoir au joueur plus de temps lors d'un événement QTE concernant le personnage.
   \item Santé mentale : Valeur représentant la santé mentale d'un personnage. Pour plus de détail sur sa gestion voir la section concernée. Elle varie entre 0 et 100 mais démarre à une valeur différente selon les personnages.
-  \item Stress : Valeur dynamique liée au courage. Elle varie entre 0 et 100. Elle influe directement les caractéristiques physiques du personnage et peut le faire refuser une mission risquée, ou freezer de peur. Pour plus de détails, voir la section concernée.
+  \item Stress : Valeur dynamique liée au courage. Elle varie entre 1 et 100. Elle influe directement les caractéristiques physiques du personnage et peut le faire refuser une mission risquée, ou freezer de peur. Pour plus de détails, voir la section concernée.
   \item Fatigue : Valeur représentant la fatigue d'un personnage. Elle commence à 0 et augmente à chaque action (idem, plus de détails, section concernée) ayant pour limite Max(Force, Vitesse).
+  \item Vision : Valeur représentant le champ de vision d'un personnage. Elle est comprise entre 2 et 7.
 \end{itemize}
 
 \subsection{Habiletés des personnages}
@@ -25,7 +28,7 @@ Un personnage peut posséder un certain nombre de capacités d'actions appelée 
   \item Policier(8) : Le personnage peut utiliser des armes à feu. Il possède aussi la compétence de calmer légèrement son entourage.
   \item Politicien(9) : Le personnage a une bonne manipulation du langage. Il peut donc calmer (stress), motiver (courage) et limiter la perte de santé mentale de son entourage.
   \item Électricien(4) : Le personnage peut manipuler toute sorte d'objet électrique (réseau, disjoncteur \textbf{(?)}, fusibles, etc.).
-  \item Cambrioleur(5) : Le personnage peut crocheter tout type de serrure. Il possède un grand sens de la concentration et peut effectuer des tâches très précises \textbf{(si on le mets dans le jeu, diminution du facteur échec critique ... auquel cas, \emph{augmenter le poids})}.
+  \item Cambrioleur(5) : Le personnage peut crocheter tout type de serrure. Il possède un grand sens de la concentration et peut effectuer des tâches très précises. Il peut donc diminuer son risque d'échec critique.
   \item Leadeur(7) : Le personnage a une expérience de gestion de groupe et sait comment donner le meilleur d'un groupe. Il peut faire réaliser cela à son entourage et donc augmenter son altruisme (à l'entourage). Il a des connaissances très diverses et possède du bon sens. Il peut donc permettre au joueur d'avoir des conseils de bon sens sur la mission en cours \textbf{(Action : Conseil bon sens)}.
   \item Ingénieur/Bricoleur(5) : Le personnage peut construire un objet élaboré à partir de deux éléments "atomiques" \textbf{(à voir pour l'implémentation de celui là ...)}.
   \item Musicien(6) : Le personnage a une bonne expérience de la musique : il est très sensible au son. Il peut donc entendre les zombis depuis une plus grande distance.
@@ -49,6 +52,12 @@ Les personnages peuvent créer des relations entre eux. Cela se traduit par une 
     \item Relation amoureuse : Ne peut se créer qu'entre un homme et une femme dont l'âge et la compatibilité sont proches. Un point de relation amoureuse se gagne de manière proportionnelle au nombre de tour où les deux personnages sont à côté et à la confiance entre eux. La gentillesse des personnages influe aussi sur cette caractéristique. Des points peuvent aussi être gagnés via certaines actions (si un personnage en sauve un autre, par exemple). 
 \end{itemize}
 Chacun de ses type est une valeur numérique comprise entre 0 et 99. A chaque fin de tour, les points sont ajoutés si les conditions sont remplis. \textbf{Note : Formule à écrire.} Deux personnages peuvent aussi perdre en confiance s'ils sont éloignés depuis trop longtemps. Ils peuvent aussi perdre des points de chaque type de relation si, par exemple, le premier personnage abandonne le deuxième face à des zombis ou qu'il fait un "nervous breakdown" et qu'il se mets à perdre la boule. \textbf{(partie à retravailler, globalement).}
+\subsection{Équipement}
+Un personnage peut porter un certain nombre d'équipement. La somme des poids des objets qu'il possède doit être inférieur à la capacité du joueur. De plus, le personnage ne peut pas porter plus d'objets demandant un bras opérationnel que le nombre qu'il lui en reste.
+\\\\
+Par exemple, si un joueur veut porter une hache et une épée, il doit avoir ses deux bras opérationnels. En revanche, il ne pourra pas porter une caisse à outils. S'il n'a plus qu'un bras, il ne peut porter qu'un seul de ces objets.
+\\\\
+Pour plus de détails sur les différents types d'objets, voir la section concernée.
 \subsection{Équilibre entre les personnages}
 \subsection{Personnages de début}
 \subsection{PNJ}

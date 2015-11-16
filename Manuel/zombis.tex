@@ -1,14 +1,4 @@
 \section{Zombis}
-\subsection{Caractéristiques des zombis}
-\subsection{Type d'action face aux zombis}
-Il y aura 2 types d'actions supplémentaire qu'un personnage peut faire s'il se trouve sur la même partie de tile qu'un zombi :
-\begin{itemize}
-  \item Fuir.
-  \item Attaquer.
-\end{itemize}
-\subsubsection{Points de fatigue}
-A chaque action, le personnage faisant cette action gagne un point de fatigue.
-Un personnage perds ses points de fatigue en ne faisant rien.
 \subsection{Types de zombis}
 Il y aura 5 types de zombis :
 \begin{itemize}
@@ -18,6 +8,58 @@ Il y aura 5 types de zombis :
   \item Les zombis infectés : ils ont les même stats que les zombis faibles mais transforment en zombis directement.
   \item Les zombis boss : ils sont forts et rapides, mais ne sont jamais en horde.
 \end{itemize}
+\subsection{Caractéristiques des zombis}
+Les zombis aussi possèdent des caractéristiques propres :
+\begin{itemize}
+  \item Type : Le zombi possède un type correspondant à ceux détaillés plus haut.
+  \item Vie : Le zombi possède un certain nombre de point de vie en fonction de son type. Lorsqu'il perd tous ses points de vie, le zombi meurt.
+  \item Attaque.
+  \item Précision.
+  \item Point de mouvement.
+  \item Vision : Cet attribut correspond à la portée à laquelle il peut voir les personnages.
+  \item Ouïe : Cet attribut correspond à la portée à laquelle il peut entendre les personnages.
+\end{itemize}
+En fonction de son type le zombi aura des caractéristiques de base différentes.
+\subsubsection{Zombis faibles}
+\begin{itemize}
+  \item Vie : 2.
+  \item Attaque : 1.
+  \item Précision : 3.
+  \item Point de mouvement : 1.
+  \item Vision : 5.
+  \item Ouïe : 5.
+\end{itemize}
+Ce type de zombi possède des caractéristiques pouvant varier de +/- 10\%. \textbf{(à voir dans l'équilibrage si, lorsqu'on a un nombre à virgule, on l'arrondi ou on le tronque)}
+\subsubsection{Zombis rapides}
+\begin{itemize}
+  \item Vie : 2.
+  \item Attaque : 1.
+  \item Précision : 5.
+  \item Point de mouvement : 2.
+  \item Vision : 5.
+  \item Ouïe : 5.
+\end{itemize}
+Ce type de zombi possède des caractéristiques pouvant varier de +/- 10\%. \textbf{(à voir dans l'équilibrage si, lorsqu'on a un nombre à virgule, on l'arrondi ou on le tronque)}
+\subsubsection{Zombis forts}
+\begin{itemize}
+  \item Vie : 4.
+  \item Attaque : 3.
+  \item Précision : 3.
+  \item Point de mouvement : 1.
+  \item Vision : 5.
+  \item Ouïe : 5.
+\end{itemize}
+Ce type de zombi possède des caractéristiques pouvant varier de +/- 10\%. \textbf{(à voir dans l'équilibrage si, lorsqu'on a un nombre à virgule, on l'arrondi ou on le tronque)}
+\subsubsection{Zombis boss}
+\begin{itemize}
+  \item Vie : 8.
+  \item Attaque : 4.
+  \item Précision : 7.
+  \item Point de mouvement : 2.
+  \item Vision : 10.
+  \item Ouïe : 10.
+\end{itemize}
+Ce type de zombi possède des caractéristiques pouvant varier de +/- 20\%. \textbf{(à voir dans l'équilibrage si, lorsqu'on a un nombre à virgule, on l'arrondi ou on le tronque)}
 \subsection{Génération de zombis}
 Sur chaque carte, il y a des points de génération de zombis. Ceux-ci possèdent une portée nommée p et un seuil s et une fréquence d'apparition f. La portée se compte en terme de changement de tile sur les directions verticales et horizontales. Considérons N le nombre de zombis dans la zone couverte par p, et P le nombre de tiles couvertes par la portée p. Considérons aussi les fonctions Arr(x) qui arrondi x à l'inférieur, et Pos(x) qui rends x s'il est supérieur à zéro.
 \\\\
