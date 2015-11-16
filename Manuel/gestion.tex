@@ -1,6 +1,54 @@
 \section{Gestion de la santé mentale, du courage, du stress et de la fatigue}
 \subsection{Santé mentale}
+La santé mentale d'un personnage représente l'état mental du personnage. Lorsqu'il possède 100 de santé mentale, cela veut dire qu'il est parfaitement sain et est capable d'écouter sa raison du mieux possible, compte tenu de son environnement stressant (voir la section suivante, sur le stress).
+\\\\
+Un personnage perds sa santé mentale lorsqu'il se passe une action choquante dans son champ de vision. Sa perte de santé mentale correspond à la caractéristique Choc de l'action multiplié par la moitié de la sensibilité du personnage. Si le personnage fait cette action, il perds alors le choc de l'action multiplié par sa sensibilité.
+\\\\
+Un personnage regagne sa santé mentale s'il ne voit pas d'actions choquantes pendant au moins 2 tours. Il regagne 5 points \textbf{(A équilibrer)} par tour où aucune action choquante ne se passe.
+\\\\
+Lorsqu'un personnage n'a plus de santé mentale, il part alors en "nervous breakdown" et n'écoute plus sa raison. Il ne peut plus être contrôlé par le joueur. Il peut avoir une réaction, parmi les réaction suivantes, de manière dépendante à ses caractéristiques :
+\begin{itemize}
+   \item \begin{itemize}
+   		\item Nom : Suicide lâche
+   		\item Poids : 7.
+   	 	\item Condition : Courage faible ou moyen.
+   	 	\item Action : Le personnage va essayer d'effectuer une des actions suivantes : "Défenestration", "Activer Bombe", "Se jeter à l'eau", "Tirer au pistolet sur". Si une seule de ces actions réussit (dans la condition ou la "réussite" à proprement parler), alors le personnage meurt. S'il possède, comme arme, une arme blanche, il meurt. S'il possède plusieurs doses de médicament, il meurt. S'il n'arrive à faire aucune de ces actions, alors il effectuera l'action "Freeze". Il n'ira sous aucune condition face à des zombis. S'il est face à des zombis lorsqu'il perds la raison, il effectuera l'action "Fuir et Crier".
+   \end{itemize}
+      \item \begin{itemize}
+   		\item Nom : Suicide fort
+   	 	\item Condition : Courage fort.
+   	 	\item Action : Le personnage en a marre de cette "vie de merde" et il ne contrôle plus ses plusions. Il veut que tout cela se finnisse : il part donc chercher les zombis (de manière semi-aléatoire) les plus proches de lui et il attaque tous les zombis qu'il croise, même s'ils sont trop forts ou nombreux. Sa fatique est divisée par 2 et son stress passe à 0. Si au bout de 10 tours, il n'en a pas trouvé un seul, alors il récupère un point de santé mentale. Si, pendant la réaction, un autre personnage essaie de l'immobiliser, alors, il attaquera aussi ce personnage.
+   \end{itemize}
+   \item \begin{itemize}
+   		\item Nom : Fuir et freezer
+   		\item Poids : 3.
+   	 	\item Condition : Vitesse élevée ou moyenne.
+   	 	\item Action : Le personnage devient paranoïaque et cherche à s'éloigner le plus possible des entités qu'il peut voir, humaines ou zombies. Il décide donc de courir dans des directions opposées à celles ci. Sa fatigue passe à 0, son bruit à 2 et son stress devient maximal. Dès qu'il trouve un endroit clos (où il voit tous les murs et que toutes les portes sont fermées) vide d'entités où qu'il est dans un coin (tile de la carte avec deux côtés bloqués) vide d'entités, après au moins 3 tours de course, il fait l'action "Freezer". S'il n'arrive pas à remplir cette condition et que sa fatigue est maximale, il reste inactif un tour et récupère un point de santé mentale. Son stress descend à 50.
+   \end{itemize}
+   \item \begin{itemize}
+   		\item Nom : Freezer
+   		\item Poids : 3.
+   	 	\item Condition : Vitesse faible. Stress élevé.
+   	 	\item Action : Le personnage ne fait plus aucune action. Il peut se laisser tuer par d'autres personnages. Il peut laisser d'autres personnages prendre son équipement. Il peut se laisser tuer par des zombis. Il ne bougera plus. Il récupérera sa santé mentale à partir de 5 tours. Si une action choquante arrive dans son champ de vision, il sera pas affecté par elle. Son stress, son bruit et sa fatigue deviennent égaux à 0. S'il survit les 5 tours, alors il récupère 1 de santé mentale et de bruit. Le joueur reprends le contrôle du personnage normalement.
+   \end{itemize}
+   \item \begin{itemize}
+   		\item Nom : Fuir et Crier
+   		\item Poids : 5.
+   	 	\item Condition : Courage faible. Vitesse élevée ou moyenne.
+   	 	\item Action : Le personnage ne sait plus quoi faire, il décide donc de courir dans des directions opposées à celles d'entités dans son champ de vision, humaines ou zombies. Comme il panique, il crie : son bruit passe à 4. Sa fatigue passe à 0. Son stress devient maximal. Si le personnage arrive à survivre 5 tours, alors il regagne 1 de santé mentale et sa fatigue passe à 90.
+   \end{itemize}
+   \item \begin{itemize}
+   		\item Nom : Attaque gratuite
+   	 	\item Condition : Force élevée ou moyenne. Stress élevé.
+   	 	\item Action : Réaction paranoïaque. Le personnage se sent aussi persécuté par les zombis que par ses coéquipiers. Il ne réfléchit plus et attaque toute entité proche de lui, qu'elle soit humaine ou zombi. S'il est seul dans son champ de vision, il part chercher des entités de manière semi-aléatoire. Il part dans une direction aléatoire, sauf s'il entends du bruit ou qu'il voit de la lumière (la nuit). Son stress prends la valeur maximale. Son bruit augmente de 1 et sa fatigue est divisée par 2. S'il survit 5 tours de cette manière, il récupère 1 de santé mentale, son bruit redescend à 1, et sa fatigue passe à 90.
+   \end{itemize}
+\end{itemize}
+Si les caractéristiques du personnage remplissent les conditions de plusieurs réactions, alors la réaction qui s'applique est choisie aléatoirement.
 \subsection{Courage et stress}
 \subsection{Fatigue}
 A chaque action, le personnage faisant cette action gagne un point de fatigue.
 Un personnage perds ses points de fatigue en ne faisant rien.
+S'il a une fatigue maximale, il ne peut plus faire d'action jusqu'à ce que sa fatigue retombe sous 75.
+\subsection{Bruit}
+\subsection{Mort d'un personnage}
+Conséquence sur les stats (santé mentale, stress, etc.).

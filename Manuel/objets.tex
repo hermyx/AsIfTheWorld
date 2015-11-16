@@ -6,6 +6,14 @@ Caractériques d'une arme :
 Nb de mains nécessaires.
 ForceArme.
 \subsection{Objets de défense}
+\subsubsection{Portes}
+La gestion des portes est une grande partie de la stratégie du jeu. Une porte possède plusieurs caractéristiques :
+\begin{itemize}
+  \item Défense : Nombre de point qu'elle fournit en tant que protection.
+  \item Usure : Nombre de dégâts qu'elle peut subir.
+  \item Ouverture : Représente le fait que la porte s'ouvre par l'avant ou par l'arrière. Elle peut aussi coulisser (entrée automatique de certains centre commerciaux, par exemple). Si la porte s'ouvre par l'avant, 
+  \item Pivot : Ne concerne que les portes qui ne coulissent pas. Cette valeur représente le type de pivot que possède la porte. Soit ses gonds sont placés à gauche, et, une fois ouverte, elle bloque la visibilité de la tile à gauche, soit ils sont placés à droite, et elle bloque la visibilité à droite. Cette valeur est indéfinie si la porte est coulissante.
+\end{itemize}
 \subsection{Objets de buff}
 \subsection{Objets autres}
 Ici, parler des portes. (gestion des portes, point de vie des portes, etc. ... Ou alors mettre ça dans objet de défense)

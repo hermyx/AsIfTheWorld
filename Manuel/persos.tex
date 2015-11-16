@@ -1,5 +1,5 @@
 \section{Personnages}
-Lors du jeu, le joueur contrôle donc de nombreux personnages. Les sections suivantes présentent donc la gestion numérique de ceux-ci.
+Lors du jeu, le joueur contrôle donc de nombreux personnages. Les sections suivantes présentent donc la gestion numérique de ceux-ci. Pour la suite de ce manuel, l'entourage d'un personnage correspond à l'ensemble des tiles sur lesquels le personnage peut arriver avec au plus 2 déplacements. \textbf{(à voir avec l'équilibrage du jeu, si on ne passe pas cette valeur à 3.)}
 \subsection{Caractéristiques}
 Un personnage possède de nombreux attributs ou caractéristiques :
 \begin{itemize}
@@ -18,7 +18,8 @@ Un personnage possède de nombreux attributs ou caractéristiques :
   \item Santé mentale : Valeur représentant la santé mentale d'un personnage. Pour plus de détail sur sa gestion voir la section concernée. Elle varie entre 0 et 100 mais démarre à une valeur différente selon les personnages.
   \item Stress : Valeur dynamique liée au courage. Elle varie entre 1 et 100. Elle influe directement les caractéristiques physiques du personnage et peut le faire refuser une mission risquée, ou freezer de peur. Pour plus de détails, voir la section concernée.
   \item Fatigue : Valeur représentant la fatigue d'un personnage. Elle commence à 0 et augmente à chaque action (idem, plus de détails, section concernée) ayant pour limite Max(Force, Vitesse).
-  \item Vision : Valeur représentant le champ de vision d'un personnage. Elle est comprise entre 2 et 7.
+  \item Vision : Valeur représentant le champ de vision d'un personnage. Elle est comprise entre 2 et 7. Le champ de vision d'un personnage correspond, dans le cas général, aux cases sur lequel celui-ci peut se déplacer avec un nombre de point de mouvement correspondant à sa vision. En revanche, certaines cases réduisent la propagation du champ de vision.
+  \item Bruit : Valeur dynamique représentant le bruit que fait une personne. Par défaut, il est égal à 1. Il peut néanmoins varier. (voir la section concernée pour plus de détails).
 \end{itemize}
 
 \subsection{Habiletés des personnages}
@@ -59,6 +60,7 @@ Par exemple, si un joueur veut porter une hache et une épée, il doit avoir ses
 \\\\
 Pour plus de détails sur les différents types d'objets, voir la section concernée.
 \subsection{Équilibre entre les personnages}
+Deux types de capacités : Celles à maximiser, celles à minimiser.
 \subsection{Personnages de début}
 \subsection{PNJ}
 \subsubsection{PNJ recrutables}
