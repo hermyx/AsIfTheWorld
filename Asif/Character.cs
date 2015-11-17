@@ -2,114 +2,278 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace Asif
 {
-    class Character
+    public class Character
     {
-        public static Random rand = new Random();
-        public char _gender
-        {
-            get;
-            set;
-        }
-        public String _name
-        {
-            get;
-            set;
-        }
-        public int _age
-        {
-            get;
-            set;
-        }
-        public int _speed
-        {
-            get;
-            set;
-        }
-        public int _strength
-        {
-            get;
-            set;
-        }
-        public int _constitution
-        {
-            get;
-            set;
-        }
-        public int _tiredness
-        {
-            get;
-            set;
-        }
-       
-        
-        public String _skill; //(électricien, serrurier, boucher, etc. A voir pour en mettre plusieurs)
-
-        public override String ToString()
-        {
-            String ret = "Name : " + _name + " - Age : " + _age + " - Gender : " + _gender + 
-                "\nCharacteristics : Strength :" + _strength + " - Constitution :" + _constitution
-                + " - Speed :" + _speed + " - Tiredness :" + _tiredness + 
-                "\nSkills :" + _skill;
-            return ret;
-        }
-
-        public String randName(char c){
-            if(_gender == 'f') return "Sarah";
-            if(_gender == 'm') return "Chuck";
-            return "Toto";
-        }
-
-        //Constructors
-
         public Character()
         {
-            int gender = rand.Next(2);
-            if(gender == 0) _gender = 'f';
-            if(gender == 1) _gender = 'm';
-            //Random gender
-            _name = randName(_gender);
-            //Random name
-            Thread.Sleep(1);
-            int age = rand.Next(70);
-            _age = age;
-            //Random age
-            int bonus_st = 0, bonus_sp = 0;
-            if (_gender=='m'){
-                bonus_st = 10;
-                bonus_sp = -10;
-            }
-            int strength = rand.Next(10);
-            _strength = 10 + bonus_st + strength;
-            //Strength = 10(+10)//20(+10)
-            int speed = rand.Next(10);
-            _speed = 20 + bonus_sp + speed;
-            //Speed = 20(+10)//10(+10)
-            _constitution = strength+speed;
-            //Constitution = Muscle ?
-            _tiredness = 0;
-            _skill = "NoneForNow";
+            throw new System.NotImplementedException();
         }
 
-        static void Main(string[] args)
+        public HashSet<Asif.Relation> Relation
         {
-            Console.WriteLine("Bienvenue dans As If The World Wasn't Ending !");
-            int c =0;
-            HashSet<Character> list_char = new HashSet<Character>();
-            while (c++ < 6)
-            {list_char.Add(new Character());
-            }
-            foreach (Character chara in list_char)
+            get
             {
-                Console.WriteLine(chara.ToString());
+                throw new System.NotImplementedException();
             }
-            Console.WriteLine("Toto");
+            set
+            {
+            }
+        }
+
+        public int Strength
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public int Constitution
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public int[] Life
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public int Age
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public char Gender
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public int Capacity
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public int Speed
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public int Movement
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public int Action
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public int Agility
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public int Reflexes
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public int Sanity
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public int Stress
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public int Tiredness
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public int Vision
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public int Noise
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public String[] Skills
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public int Courage
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public int Sensitivity
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public int Altruism
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public int Kindness
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public int Compatibility
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public int ID
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
         }
     }
-
-        
 }
