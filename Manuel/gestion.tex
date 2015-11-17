@@ -1,4 +1,5 @@
-\section{Gestion de la santé mentale, du courage, du stress et de la fatigue}
+\section{Gestion des attributs fortement dynamiques}
+Malgré que des caractéristiques, telles que le courage, peuvent varier au en fonction des tours, certains attributs varient énormément au cours d'une partie. Ainsi, ces attributs sont appelés fortement dynamiques. Pour le reste du manuel, ils seront simplement appelés attributs ou caractéristiques dynamiques.
 \subsection{Santé mentale}
 La santé mentale d'un personnage représente l'état mental du personnage. Lorsqu'il possède 100 de santé mentale, cela veut dire qu'il est parfaitement sain et est capable d'écouter sa raison du mieux possible, compte tenu de son environnement stressant (voir la section suivante, sur le stress).
 \\\\
@@ -9,6 +10,24 @@ Un personnage regagne sa santé mentale s'il ne voit pas d'actions choquantes pe
 Lorsqu'un personnage n'a plus de santé mentale, il part alors en "nervous breakdown" et n'écoute plus sa raison. Il ne peut plus être contrôlé par le joueur. Il peut avoir une réaction, parmi les réaction suivantes, de manière dépendante à ses caractéristiques :
 \begin{itemize}
    \item \begin{itemize}
+   		\item Nom : Schizophrénie N.1
+   		\item Poids : 4. (?)
+   	 	\item Condition : Stress faible.
+   	 	\item Action : Le personnage devient légèrement schizophrène. Pendant 5 tours, il possède deux points d'actions. Le premier est fait par le joueur et le deuxième est choisi aléatoirement par le jeu.
+   \end{itemize}
+   \item \begin{itemize}
+   		\item Nom : Schizophrénie N.2
+   		\item Poids : 6. (?)
+   	 	\item Condition : Stress moyen.
+   	 	\item Action : Le personnage devient légèrement schizophrène. Pendant 6 tours, il possède trois points d'actions. Le premier est fait par le joueur et le deuxième est choisi aléatoirement par le jeu.
+   \end{itemize}
+   \item \begin{itemize}
+   		\item Nom : Schizophrénie N.3
+   		\item Poids : 8. (?)
+   	 	\item Condition : Stress élevé.
+   	 	\item Action : Le personnage devient légèrement schizophrène. Pendant 10 tours, il possède trois points d'actions. Le premier est fait par le joueur et le deuxième est choisi aléatoirement par le jeu.
+   \end{itemize}
+   \item \begin{itemize}
    		\item Nom : Suicide lâche
    		\item Poids : 7.
    	 	\item Condition : Courage faible ou moyen.
@@ -16,8 +35,9 @@ Lorsqu'un personnage n'a plus de santé mentale, il part alors en "nervous break
    \end{itemize}
       \item \begin{itemize}
    		\item Nom : Suicide fort
+   		\item Poids : 5.
    	 	\item Condition : Courage fort.
-   	 	\item Action : Le personnage en a marre de cette "vie de merde" et il ne contrôle plus ses plusions. Il veut que tout cela se finnisse : il part donc chercher les zombis (de manière semi-aléatoire) les plus proches de lui et il attaque tous les zombis qu'il croise, même s'ils sont trop forts ou nombreux. Sa fatique est divisée par 2 et son stress passe à 0. Si au bout de 10 tours, il n'en a pas trouvé un seul, alors il récupère un point de santé mentale. Si, pendant la réaction, un autre personnage essaie de l'immobiliser, alors, il attaquera aussi ce personnage.
+   	 	\item Action : Le personnage en a marre de cette "vie de merde" et il ne contrôle plus ses pulsions. Il veut que tout cela se finisse : il part donc chercher les zombis (de manière semi-aléatoire) les plus proches de lui et il attaque tous les zombis qu'il croise, même s'ils sont trop forts ou nombreux. Sa fatigue est divisée par 2 et son stress passe à 0. Si au bout de 10 tours, il n'en a pas trouvé un seul, alors il récupère un point de santé mentale. Si, pendant la réaction, un autre personnage essaie de l'immobiliser, alors, il attaquera aussi ce personnage.
    \end{itemize}
    \item \begin{itemize}
    		\item Nom : Fuir et freezer
@@ -28,27 +48,67 @@ Lorsqu'un personnage n'a plus de santé mentale, il part alors en "nervous break
    \item \begin{itemize}
    		\item Nom : Freezer
    		\item Poids : 3.
-   	 	\item Condition : Vitesse faible. Stress élevé.
+   	 	\item Condition : Vitesse faible.
    	 	\item Action : Le personnage ne fait plus aucune action. Il peut se laisser tuer par d'autres personnages. Il peut laisser d'autres personnages prendre son équipement. Il peut se laisser tuer par des zombis. Il ne bougera plus. Il récupérera sa santé mentale à partir de 5 tours. Si une action choquante arrive dans son champ de vision, il sera pas affecté par elle. Son stress, son bruit et sa fatigue deviennent égaux à 0. S'il survit les 5 tours, alors il récupère 1 de santé mentale et de bruit. Le joueur reprends le contrôle du personnage normalement.
+   \end{itemize}
+   \item \begin{itemize}
+   		\item Nom : Attaque gratuite
+   		\item Poids : 9.
+   	 	\item Condition : Force élevée ou moyenne. Stress élevé.
+   	 	\item Action : Réaction paranoïaque. Le personnage se sent aussi persécuté par les zombis que par ses coéquipiers. Il ne réfléchit plus et attaque toute entité proche de lui, qu'elle soit humaine ou zombi. S'il est seul dans son champ de vision, il part chercher des entités de manière semi-aléatoire. Il part dans une direction aléatoire, sauf s'il entends du bruit ou qu'il voit de la lumière (la nuit). Son stress prends la valeur maximale. Son bruit augmente de 1 et sa fatigue est divisée par 2. S'il survit 5 tours de cette manière, il récupère 1 de santé mentale, son bruit redescend à 1, et sa fatigue passe à 90.
+   \end{itemize}
+   \item \begin{itemize}
+   		\item Nom : Freezer et Crier
+   		\item Poids : 7.
+   	 	\item Condition : Force faible. Vitesse faible.
+   	 	\item Action : Le personnage devient fou : il se mets à raconter n'importe quoi. Il ne se rends plus compte du monde autour de lui, ni de la puissance sonore qu'il mets dans sa voix. Pendant 5 tours, son bruit devient égal à 4 et son stress à 0. S'il survit ces tours, il regagne 1 de santé mentale.
    \end{itemize}
    \item \begin{itemize}
    		\item Nom : Fuir et Crier
    		\item Poids : 5.
-   	 	\item Condition : Courage faible. Vitesse élevée ou moyenne.
+   	 	\item Condition : Force faible. Vitesse élevée ou moyenne.
    	 	\item Action : Le personnage ne sait plus quoi faire, il décide donc de courir dans des directions opposées à celles d'entités dans son champ de vision, humaines ou zombies. Comme il panique, il crie : son bruit passe à 4. Sa fatigue passe à 0. Son stress devient maximal. Si le personnage arrive à survivre 5 tours, alors il regagne 1 de santé mentale et sa fatigue passe à 90.
    \end{itemize}
-   \item \begin{itemize}
-   		\item Nom : Attaque gratuite
-   	 	\item Condition : Force élevée ou moyenne. Stress élevé.
-   	 	\item Action : Réaction paranoïaque. Le personnage se sent aussi persécuté par les zombis que par ses coéquipiers. Il ne réfléchit plus et attaque toute entité proche de lui, qu'elle soit humaine ou zombi. S'il est seul dans son champ de vision, il part chercher des entités de manière semi-aléatoire. Il part dans une direction aléatoire, sauf s'il entends du bruit ou qu'il voit de la lumière (la nuit). Son stress prends la valeur maximale. Son bruit augmente de 1 et sa fatigue est divisée par 2. S'il survit 5 tours de cette manière, il récupère 1 de santé mentale, son bruit redescend à 1, et sa fatigue passe à 90.
-   \end{itemize}
 \end{itemize}
-Si les caractéristiques du personnage remplissent les conditions de plusieurs réactions, alors la réaction qui s'applique est choisie aléatoirement.
-\subsection{Courage et stress}
+Si les caractéristiques du personnage remplissent les conditions de plusieurs réactions, alors la réaction qui s'applique est choisie aléatoirement. A noter que dans le futur, les réactions pourront être plus nombreuses et implémenter des conditions plus précises, en rajoutant un facteur de stress.
+\subsection{Stress}
+Le stress est une valeur ayant des répercussions sur la puissance d'attaque des joueurs ainsi que leur faculté à se concentrer en combat, lorsqu'ils attaquent (Chance) (voir section sur les combats). Elle influe aussi sur la facilité qu'ils ont à créer des relations sociales.
+\\\\
+Le stress augmente lorsque le personnage réalise une action stressante. Notons NP le nombre de personnages dans l'entourage de celui faisant l'action stressante, et ArrSup(x) qui arrondi x au supérieur. Le gain de stress, GS, se fait selon cette formule : \textbf{GS = ArrSup(10*StressAction/(Courage*NP))}. En moyenne, le gain de stress pour un personnage ayant 5 de courage et pour une action moyennement stressante (5), tourne entre 2 et 10.
+\\\\
+Le stress diminue lorsque le personnage passe un tour sans faire d'action stressante. En gardant les même notations, la perte de stress, PS, se fait selon cette formule : \textbf{PS : ArrSup([Courage*NP/10]+0.01)}. En moyenne, à chaque tour un personnage récupère entre 1 et 3 points de stress par tour.
 \subsection{Fatigue}
-A chaque action, le personnage faisant cette action gagne un point de fatigue.
-Un personnage perds ses points de fatigue en ne faisant rien.
-S'il a une fatigue maximale, il ne peut plus faire d'action jusqu'à ce que sa fatigue retombe sous 75.
+La fatigue va influer la puissance d'attaque et la résistance défensive d'un personnage au combat.
+\\\\
+A chaque action, le personnage faisant cette action gagne un nombre de point de fatigue égal au nombre de points de Fatigue de cette action. Il perds ses points de fatigue en ne faisant soit aucune action par tour soit que des actions qui ont des points de fatigue nuls.
+\\\\
+Si la fatigue du personnage est maximale, il ne peut plus faire d'action jusqu'à ce que sa fatigue retombe sous 75\% de sa capacité initiale.
 \subsection{Bruit}
+Le bruit est le champ sonore créé par le personnage. Si un personnage a un bruit de X, il créera un champ sonore sur chaque case étant à 2*X cases ou moins du personnages. Sur une rue vide de taille infinie (carte sans obstacles), ces cases correspondent aux tiles sur lesquelles le personnages peut aller avec un nombre de points de mouvement de 2*X. Chaque tile de la map possède une caractéristique de champ sonore. Cette caractéristique est cumulative et correspond à la somme des champs sonores des différents personnages. 
+\\\\
+Le champ sonore d'un personnage diminue d'un points toutes les 2 tiles. Si un personnage a un bruit de 3, alors
+\begin{itemize}
+   \item Sur les cases de portées 1-2, le champ sonore sera de 3.
+   \item Sur les cases de portées 3-4, le champ sonore sera de 2.
+   \item Sur les cases de portées 5-6, le champ sonore sera de 1.
+\end{itemize} 
+Un personnage, au repos, a un bruit de 1. S'il fait une action, il faut additionner son bruit initial au bruit de l'action pendant la durée du tour.
 \subsection{Mort d'un personnage}
-Conséquence sur les stats (santé mentale, stress, etc.).
+La mort d'un personnage peut avoir plusieurs conséquences dont celles-ci :
+\begin{itemize}
+   \item Santé mentale : Tous les personnages dans l'entourage du personnage mort perdent X=ArrSup(10*(Sensibilité/3)) en santé mentale. Cette valeur est en moyenne à 17.
+   \item Stress : Tous les personnages dans l'entourage du personnage mort ajoutent X=ArrSup(20/Courage) à leur stress. Cette valeur est en moyenne à 10.
+\end{itemize}
+Si le personnage mort possédait une relation avec ceux de son entourage, le paramètre X et Y gagnent, avant déduction/ajout :
+\begin{itemize}
+   \item Si la relation était entre 50 et 80 : + 2
+   \item Si la relation était entre 80 et 99 : + 4
+   \item Si la relation était égale à 100 : + 7
+\end{itemize}
+De plus, en fonction du type de relation, d'autres malus sont ajoutés :
+\begin{itemize}
+   \item Confiance : Y=Y+3
+   \item Amitié : Y=Y+2 ; X=X+5
+   \item Amour : X=X+8
+\end{itemize}
+Enfin, si un personnage avait un lien amoureux maximum avec le personnage mort et qu'il avait le droit à un bonus de Vie. Alors tous ses membres perdent le point de vie supplémentaire. Si un membre n'avait plus qu'un seul point de vie, il ne le perds pas (le membre est blessé mais reste utilisable).

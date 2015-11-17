@@ -23,35 +23,43 @@
 \BOOKMARK [1][-]{section.4}{Combats}{}% 23
 \BOOKMARK [2][-]{subsection.4.1}{Attaque par le personnage}{section.4}% 24
 \BOOKMARK [2][-]{subsection.4.2}{Attaque par le zombi}{section.4}% 25
-\BOOKMARK [1][-]{section.5}{Gestion de la sant\351 mentale, du courage, du stress et de la fatigue}{}% 26
+\BOOKMARK [1][-]{section.5}{Gestion des attributs fortement dynamiques}{}% 26
 \BOOKMARK [2][-]{subsection.5.1}{Sant\351 mentale}{section.5}% 27
-\BOOKMARK [2][-]{subsection.5.2}{Courage et stress}{section.5}% 28
+\BOOKMARK [2][-]{subsection.5.2}{Stress}{section.5}% 28
 \BOOKMARK [2][-]{subsection.5.3}{Fatigue}{section.5}% 29
 \BOOKMARK [2][-]{subsection.5.4}{Bruit}{section.5}% 30
 \BOOKMARK [2][-]{subsection.5.5}{Mort d'un personnage}{section.5}% 31
 \BOOKMARK [1][-]{section.6}{Carte}{}% 32
-\BOOKMARK [2][-]{subsection.6.1}{Interaction entre la carte et les personnages}{section.6}% 33
-\BOOKMARK [1][-]{section.7}{Objets}{}% 34
-\BOOKMARK [2][-]{subsection.7.1}{Objets d'attaque}{section.7}% 35
-\BOOKMARK [2][-]{subsection.7.2}{Objets de d\351fense}{section.7}% 36
-\BOOKMARK [3][-]{subsubsection.7.2.1}{Portes}{subsection.7.2}% 37
-\BOOKMARK [2][-]{subsection.7.3}{Objets de buff}{section.7}% 38
-\BOOKMARK [2][-]{subsection.7.4}{Objets autres}{section.7}% 39
-\BOOKMARK [1][-]{section.8}{Actions}{}% 40
-\BOOKMARK [2][-]{subsection.8.1}{Type d'actions}{section.8}% 41
-\BOOKMARK [2][-]{subsection.8.2}{Caract\351ristiques des actions}{section.8}% 42
-\BOOKMARK [2][-]{subsection.8.3}{Liste des actions possibles}{section.8}% 43
-\BOOKMARK [1][-]{section.9}{M\351t\351o}{}% 44
-\BOOKMARK [2][-]{subsection.9.1}{Cycle jour/nuit}{section.9}% 45
-\BOOKMARK [2][-]{subsection.9.2}{Pluie}{section.9}% 46
-\BOOKMARK [2][-]{subsection.9.3}{Brouillard}{section.9}% 47
-\BOOKMARK [2][-]{subsection.9.4}{Verglas}{section.9}% 48
-\BOOKMARK [1][-]{section.10}{QTE}{}% 49
-\BOOKMARK [2][-]{subsection.10.1}{\311v\351nements}{section.10}% 50
-\BOOKMARK [2][-]{subsection.10.2}{Qu\352tes}{section.10}% 51
-\BOOKMARK [1][-]{section.11}{Missions}{}% 52
-\BOOKMARK [2][-]{subsection.11.1}{Type de sc\351narios}{section.11}% 53
-\BOOKMARK [2][-]{subsection.11.2}{Exemple de qu\352te annexe}{section.11}% 54
-\BOOKMARK [2][-]{subsection.11.3}{Cas sp\351ciaux}{section.11}% 55
-\BOOKMARK [3][-]{subsubsection.11.3.1}{Troisi\350me tour}{subsection.11.3}% 56
-\BOOKMARK [1][-]{section.12}{A voir}{}% 57
+\BOOKMARK [2][-]{subsection.6.1}{Tiles}{section.6}% 33
+\BOOKMARK [3][-]{subsubsection.6.1.1}{Caract\351ristiques de tiles}{subsection.6.1}% 34
+\BOOKMARK [2][-]{subsection.6.2}{Interaction entre la carte et les personnages}{section.6}% 35
+\BOOKMARK [1][-]{section.7}{Objets}{}% 36
+\BOOKMARK [2][-]{subsection.7.1}{Objets d'attaque}{section.7}% 37
+\BOOKMARK [2][-]{subsection.7.2}{Objets de d\351fense}{section.7}% 38
+\BOOKMARK [3][-]{subsubsection.7.2.1}{Portes}{subsection.7.2}% 39
+\BOOKMARK [2][-]{subsection.7.3}{Objets de buff}{section.7}% 40
+\BOOKMARK [2][-]{subsection.7.4}{Objets autres}{section.7}% 41
+\BOOKMARK [1][-]{section.8}{Actions}{}% 42
+\BOOKMARK [2][-]{subsection.8.1}{Type d'actions}{section.8}% 43
+\BOOKMARK [2][-]{subsection.8.2}{Caract\351ristiques des actions}{section.8}% 44
+\BOOKMARK [2][-]{subsection.8.3}{Liste des actions possibles}{section.8}% 45
+\BOOKMARK [1][-]{section.9}{M\351t\351o}{}% 46
+\BOOKMARK [2][-]{subsection.9.1}{Cycle jour/nuit}{section.9}% 47
+\BOOKMARK [2][-]{subsection.9.2}{Pluie}{section.9}% 48
+\BOOKMARK [2][-]{subsection.9.3}{Brouillard}{section.9}% 49
+\BOOKMARK [2][-]{subsection.9.4}{Verglas}{section.9}% 50
+\BOOKMARK [1][-]{section.10}{QTE}{}% 51
+\BOOKMARK [2][-]{subsection.10.1}{\311v\351nements}{section.10}% 52
+\BOOKMARK [2][-]{subsection.10.2}{Qu\352tes}{section.10}% 53
+\BOOKMARK [1][-]{section.11}{Missions}{}% 54
+\BOOKMARK [2][-]{subsection.11.1}{Type de sc\351narios}{section.11}% 55
+\BOOKMARK [2][-]{subsection.11.2}{Exemple de qu\352te annexe}{section.11}% 56
+\BOOKMARK [2][-]{subsection.11.3}{Cas sp\351ciaux}{section.11}% 57
+\BOOKMARK [3][-]{subsubsection.11.3.1}{Troisi\350me tour}{subsection.11.3}% 58
+\BOOKMARK [1][-]{section.12}{Interface Graphique}{}% 59
+\BOOKMARK [2][-]{subsection.12.1}{Vue g\351n\351rale}{section.12}% 60
+\BOOKMARK [2][-]{subsection.12.2}{Donn\351es de l'ATH}{section.12}% 61
+\BOOKMARK [2][-]{subsection.12.3}{Caract\351ristiques des personnages}{section.12}% 62
+\BOOKMARK [2][-]{subsection.12.4}{Relations entre les personnages}{section.12}% 63
+\BOOKMARK [2][-]{subsection.12.5}{Actions}{section.12}% 64
+\BOOKMARK [1][-]{section.13}{A voir}{}% 65

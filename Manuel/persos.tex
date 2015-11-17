@@ -12,12 +12,12 @@ Un personnage possède de nombreux attributs ou caractéristiques :
   \item Capacité : Valeur représentant le nombre d'objet d'équipement que peut transporter un personnage. La capacité, notée C, est calculée de telle manière : C = 2*Force +  5*Consitution. C peut donc varier entre 10 et 40.
   \item Vitesse : Valeur représentant la vitesse d'un personnage. Elle varie de 10 à 39.
   \item Mouvement : Valeur représentant directement la capacité de mouvement d'un personnage. Elle varie entre 0 et 3, et sa valeur maximale correspond à la vitesse du personnage divisée par 10, et tronquée à l'unité.
-  \item Action : Valeur dynamique ayant une valeur maximale de 1 pour tous les personnages. Elle permet d'effectuer une action quelconque. Cette valeur reprends sa valeur maximale en chaque début de tour (du joueur).
+  \item Action : Valeur dynamique ayant une valeur maximale de 1 pour tous les personnages sauf cas exceptionnels (voir section Santé mentale). Elle permet d'effectuer une action quelconque. Cette valeur reprends sa valeur maximale en chaque début de tour (du joueur).
   \item Agilité : Valeur représentant la facilité qu'a un personnage à escalader des murs ou esquiver les ennemis. Cette valeur est comprise entre 1 et 10.
   \item Réflexes : Valeur représentant la rapidité de réaction d'un personnage. Elle est comprise entre 1 et 10. Si elle est élevée elle permet d'avoir au joueur plus de temps lors d'un événement QTE concernant le personnage.
   \item Santé mentale : Valeur représentant la santé mentale d'un personnage. Pour plus de détail sur sa gestion voir la section concernée. Elle varie entre 0 et 100 mais démarre à une valeur différente selon les personnages.
-  \item Stress : Valeur dynamique liée au courage. Elle varie entre 1 et 100. Elle influe directement les caractéristiques physiques du personnage et peut le faire refuser une mission risquée, ou freezer de peur. Pour plus de détails, voir la section concernée.
-  \item Fatigue : Valeur représentant la fatigue d'un personnage. Elle commence à 0 et augmente à chaque action (idem, plus de détails, section concernée) ayant pour limite Max(Force, Vitesse).
+  \item Stress : Valeur dynamique liée au courage. Elle varie entre 1 et 100. Elle influe directement les caractéristiques physiques et sociales du personnage. Pour plus de détails, voir la section concernée.
+  \item Fatigue : Valeur représentant la fatigue d'un personnage. Elle commence à 0 et augmente à chaque action (idem, plus de détails, section concernée) ayant pour limite Max(4*Force, Vitesse).
   \item Vision : Valeur représentant le champ de vision d'un personnage. Elle est comprise entre 2 et 7. Le champ de vision d'un personnage correspond, dans le cas général, aux cases sur lequel celui-ci peut se déplacer avec un nombre de point de mouvement correspondant à sa vision. En revanche, certaines cases réduisent la propagation du champ de vision.
   \item Bruit : Valeur dynamique représentant le bruit que fait une personne. Par défaut, il est égal à 1. Il peut néanmoins varier. (voir la section concernée pour plus de détails).
 \end{itemize}
@@ -39,20 +39,35 @@ Un personnage peut posséder un certain nombre de capacités d'actions appelée 
 \subsection{Psychologie des personnages}
 Un personnage peut posséder plusieurs attributs qui influent sa manière de réagir indépendamment du contrôle du joueur. L'ensemble de ses attributs s'appelle la psychologie du personnage. Chaque personnage possède une valeur, comprise entre 0 et 9, pour chacun de ses attributs. Ces attributs sont :
 \begin{itemize}
-  \item Altruisme : Décide à quel point le personnage est près à aider quelqu'un d'autre. Cet attribut va influencer le courage d'un personnage en fonction de si sa quête le concerne, concerne le groupe ou concerne seulement un ou plusieurs individus (personnages ou PNJ) dont il ne fait pas partie. Un personnage égoïste (0 en altruisme) préfère donc les missions qui concerne directement sa personne. Il peut aussi être concerné par les personnes avec qui il a des liens forts d'amitiés ou d'amour. 
-  \item Courage : Valeur représentant le Courage d'un personnage. Elle est statique et va influer la capacité d'un personnage à faire des actions risquées, à freezer de peur, etc. Elle est comprise entre 0 et 9. Pour plus de détails, voir la section concernée.
-  \item Sensibilité : Valeur représentant la capacité d'un personnage à perdre/gagner plus ou moins vite sa santé mentale. De même, voir la section concernée pour plus de détails sur sa gestion. Elle varie entre 0 et 9.
+  \item Courage : Valeur représentant le Courage d'un personnage. Elle est statique et va influer la capacité d'un personnage à faire des actions risquées(via le stress), à freezer de peur, etc. Sa valeur initiale est comprise entre 0 et 9 et peut avoir une valeur à virgule. Elle peut monter jusqu'à 12 \textbf{(?)}.
+  \item Sensibilité : Valeur représentant la capacité d'un personnage à perdre/gagner plus ou moins vite sa santé mentale. Elle varie entre 0 et 9 et peut avoir une valeur à virgule.
+  \item Altruisme : Décide à quel point le personnage est près à aider quelqu'un d'autre. Cet attribut permet de créer des relations de confiance entre les personnages. Elle est comprise entre 0 et 9 et peut avoir une valeur à virgule.
   \item Gentillesse\textbf{(?)} : Valeur représentant la gentillesse d'un personnage. Elle est comprise entre 0 et 9 et va influer sa facilité à créer des relations sociales avec d'autres personnages.
-  \item Compatibilité : Valeur comprise entre 0 et 9 et représentant le type de personnalité que le personnage possède. Elle va permettre à un personnage de créer une relation plus facilement avec un autre personnage ayant une compatibilité similaire. La valeur est circulaire, c'est-à-dire que le 9 est considéré près du 0.
+  \item Compatibilité : Valeur comprise entre 1 et 9 et représentant le type de personnalité que le personnage possède. Elle va permettre à un personnage de créer une relation plus facilement avec un autre personnage ayant une compatibilité similaire. Pour voir une réprésentation sémantique de ces chiffres voir le fichier Compatibilité.png situé dans Autres.
 \end{itemize} 
 \subsection{Relations entre les personnages}
 Les personnages peuvent créer des relations entre eux. Cela se traduit par une affinité à vouloir rester près de ces personnes. En faisant rester les personnes liées ensemble, elles peuvent gagner des bonus dans certaines stats, en fonction du type de relation existant entre elles. Les relations sont de trois types : 
 \begin{itemize}
   \item Affinité/Confiance : Peut se créer entre tous les personnages. Un point de confiance se gagne de manière proportionnelle au nombre de tour où les deux personnages sont à côté. Il est aussi lié à l'altruisme des personnages concernés.
-  \item Relation amicale : Peut se créer entre tous personnages ayant une compatibilité proche. Un point de relation amical se gagne de manière proportionnelle au nombre de tour où les deux personnages sont à côté et à la confiance entre eux. La gentillesse des personnage influe aussi sur cette caractéristique. Des points peuvent aussi être gagnés via certaines actions \textbf{(à voir)}. 
-    \item Relation amoureuse : Ne peut se créer qu'entre un homme et une femme dont l'âge et la compatibilité sont proches. Un point de relation amoureuse se gagne de manière proportionnelle au nombre de tour où les deux personnages sont à côté et à la confiance entre eux. La gentillesse des personnages influe aussi sur cette caractéristique. Des points peuvent aussi être gagnés via certaines actions (si un personnage en sauve un autre, par exemple). 
+  \item Relation amicale : Peut se créer entre tous personnages ayant une compatibilité proche. Un point de relation amical se gagne de manière proportionnelle au nombre de tour où les deux personnages sont à côté et à la confiance entre eux. La gentillesse et le stress des personnage influe aussi sur cette caractéristique. Des points peuvent aussi être gagnés via certaines actions \textbf{(à voir)}. 
+    \item Relation amoureuse : Ne peut se créer qu'entre un homme et une femme dont l'âge et la compatibilité sont proches. Un point de relation amoureuse se gagne de manière proportionnelle au nombre de tour où les deux personnages sont à côté et à la confiance entre eux. La gentillesse et le stress des personnages influe aussi sur cette caractéristique. Des points peuvent aussi être gagnés via certaines actions (si un personnage en sauve un autre, par exemple). 
 \end{itemize}
 Chacun de ses type est une valeur numérique comprise entre 0 et 99. A chaque fin de tour, les points sont ajoutés si les conditions sont remplis. \textbf{Note : Formule à écrire.} Deux personnages peuvent aussi perdre en confiance s'ils sont éloignés depuis trop longtemps. Ils peuvent aussi perdre des points de chaque type de relation si, par exemple, le premier personnage abandonne le deuxième face à des zombis ou qu'il fait un "nervous breakdown" et qu'il se mets à perdre la boule. \textbf{(partie à retravailler, globalement).}
+\\\\
+Lorsque deux personnes ont une relation, ils peuvent gagner des bonus de statistiques selon un critère noté C pour la confiance, A, AA et AAA pour l'amitié et X, XX et XXX pour l'amour. 
+Lorsque deux personnes sont dans leurs entourages respectifs, ces bonus arrivent :
+\begin{itemize}
+   \item Confiance : Les deux personnages gagnent chacun C en courage tant qu'ils sont à côté.
+   \item Amitié : Les deux personnages gagnent chacun A en courage et AA en altruisme lorsqu'ils sont à côté. Ils ont aussi un gain de bruit de AAA. Lorsque les deux personnages sortent de leurs entourages respectifs, toutes les caractéristiques reprennent leurs valeurs de base.
+   \item Amour : Les deux personnages gagnent chacun X en courage et XX en vie, pour chaque membre. Si un membre était inutilisable avant, il reste inutilisable. Les deux personnages gagnent aussi XXX en fatigue à chaque fois qu'ils rentrent dans leurs entourages respectifs . Ces bonus ne sont pas dépendants de la distance entre les personnages (sauf pour la fatigue. Mais même ce malus reste présent lorsque les deux personnages sont loin, l'un de l'autre. Ce n'est donc pas rentable de rentrer dans l'entourage puis se barrer, puis y retourner, etc. Il faut éviter au maximum les séparations/réunions/séparation/...).
+\end{itemize}
+Ces variables varient de cette manière (les points correspondent à la caractéristique auxquels ils sont associés. Les A* pour l'amitié seulement, etc.):
+\begin{itemize}
+   \item Entre 50 et 80 : C=0 ; A=0.1 ; AA=0 ; AAA=0 ; X=0.1 ; XX=0 ; XXX=1.
+   \item Entre 80 et 99 : C=0.05 ; A=0.2 ; AA=1 ; AAA=0 ; X=0.2 ; XX=0 ; XXX=2.
+   \item Égal à 100 : C=0.1 ; A=0.6 ; AA=2 ; AAA=1 ; X=0.6 ; XX=1 ; XXX=4.
+\end{itemize}
+\textbf{(A équilibrer !)}
 \subsection{Équipement}
 Un personnage peut porter un certain nombre d'équipement. La somme des poids des objets qu'il possède doit être inférieur à la capacité du joueur. De plus, le personnage ne peut pas porter plus d'objets demandant un bras opérationnel que le nombre qu'il lui en reste.
 \\\\
