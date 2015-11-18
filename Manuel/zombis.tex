@@ -12,12 +12,14 @@ Il y aura 5 types de zombis :
 Les zombis aussi possèdent des caractéristiques propres :
 \begin{itemize}
   \item Type : Le zombi possède un type correspondant à ceux détaillés plus haut.
+  \item État : Le zombi peut-être au repos ou en chasse. Certaines caractéristiques de zombis peuvent avoir plusieurs valeurs en fonction de son état. Auquel cas, les valeurs sont notés comme ceci : ValeurRepos // ValeurChasse.
   \item Vie : Le zombi possède un certain nombre de point de vie en fonction de son type. Lorsqu'il perd tous ses points de vie, le zombi meurt.
   \item Attaque.
   \item Précision.
   \item Point de mouvement.
   \item Vision : Cet attribut correspond à la portée à laquelle il peut voir les personnages.
   \item Ouïe : Cet attribut correspond à la portée à laquelle il peut entendre les personnages.
+  \item Bruit : De manière similaire aux personnages, cette caractéristiques influe sur le bruit créés par les zombis.
 \end{itemize}
 En fonction de son type le zombi aura des caractéristiques de base différentes.
 \subsubsection{Zombis faibles}

@@ -5,9 +5,9 @@ using System.Text;
 
 namespace Asif
 {
-    public class CharacterConsView
+    public class ZombiControler
     {
-        public Character Character
+        public Zombi Zombi
         {
             get
             {
@@ -18,7 +18,7 @@ namespace Asif
             }
         }
 
-        public CharacterControler CharacterControler
+        public ZombiConsView ZombiConsView
         {
             get
             {
@@ -27,6 +27,13 @@ namespace Asif
             set
             {
             }
+        }
+
+        //update the values of the other properties of the zombis that updates with the Type. (Noise, Movement, etc.)
+        public void updateType()
+
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

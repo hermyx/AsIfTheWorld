@@ -20,21 +20,22 @@ Un personnage possède de nombreux attributs ou caractéristiques :
   \item Fatigue : Valeur représentant la fatigue d'un personnage. Elle commence à 0 et augmente à chaque action (idem, plus de détails, section concernée) ayant pour limite Max(4*Force, Vitesse).
   \item Vision : Valeur représentant le champ de vision d'un personnage. Elle est comprise entre 2 et 7. Le champ de vision d'un personnage correspond, dans le cas général, aux cases sur lequel celui-ci peut se déplacer avec un nombre de point de mouvement correspondant à sa vision. En revanche, certaines cases réduisent la propagation du champ de vision.
   \item Bruit : Valeur dynamique représentant le bruit que fait une personne. Par défaut, il est égal à 1. Il peut néanmoins varier. (voir la section concernée pour plus de détails).
+  \item Ouïe : Capacité d'entendre les zombis. Valeur représentant le seuil d'entente. Commence à 1 par défaut. Lorsqu'un personnage entends un bruit, il récupère, comme donnée (non-numérique), la puissance du bruit (du champ sonore) ainsi que la direction. Voir la section gestion du bruit pour plus de détails. 
 \end{itemize}
 
 \subsection{Habiletés des personnages}
 Un personnage peut posséder un certain nombre de capacités d'actions appelée Habiletés. Celles-ci peuvent jouer sur les statistiques du personnage et/ou de son entourage, permettre l'utilisation par le personnage de certains objets, ou permettent de nouvelles actions au joueur. Chaque habileté possède un poids utilisé dans le calcul de l'équilibre (voir section concernée) compris entre 0 et 9. Ci dessous une liste exhaustive des habiletés avec leurs poids entre parenthèses :
 \begin{itemize}
-  \item Chimiste(4) : Le personnage peut identifier les médicaments. Il permet donc au joueur de savoir quel médicament récupérer ou utiliser \textbf{(Action : Infos médicament)}. Il peut aussi créer des bombes, produits, cocktails molotovs, si besoin.
-  \item Policier(8) : Le personnage peut utiliser des armes à feu. Il possède aussi la compétence de calmer légèrement son entourage.
-  \item Politicien(9) : Le personnage a une bonne manipulation du langage. Il peut donc calmer (stress), motiver (courage) et limiter la perte de santé mentale de son entourage.
-  \item Électricien(4) : Le personnage peut manipuler toute sorte d'objet électrique (réseau, disjoncteur \textbf{(?)}, fusibles, etc.).
-  \item Cambrioleur(5) : Le personnage peut crocheter tout type de serrure. Il possède un grand sens de la concentration et peut effectuer des tâches très précises. Il peut donc diminuer son risque d'échec critique.
-  \item Leadeur(7) : Le personnage a une expérience de gestion de groupe et sait comment donner le meilleur d'un groupe. Il peut faire réaliser cela à son entourage et donc augmenter son altruisme (à l'entourage). Il a des connaissances très diverses et possède du bon sens. Il peut donc permettre au joueur d'avoir des conseils de bon sens sur la mission en cours \textbf{(Action : Conseil bon sens)}.
-  \item Ingénieur/Bricoleur(5) : Le personnage peut construire un objet élaboré à partir de deux éléments "atomiques" \textbf{(à voir pour l'implémentation de celui là ...)}.
-  \item Musicien(6) : Le personnage a une bonne expérience de la musique : il est très sensible au son. Il peut donc entendre les zombis depuis une plus grande distance.
-  \item Athlète(5) : Le personnage est habitué aux efforts physiques intenses : il gagne donc moins vite sa fatigue. De plus, il a en général de bonnes stats physique mais aussi en sensibilité.
-  \item Chasseur(3) : Le personnage est habitué à la chasse, il peut donc traquer un zombi ou un PNJ. Il peut  aider le joueur à trouver la direction d'une cible vivante (zombi ou PNJ) \textbf{(Action : Traque direction cible)}. Il peut aussi être capable d'utiliser arc.
+  \item Chimie(4) : Le personnage peut identifier les médicaments. Il permet donc au joueur de savoir quel médicament récupérer ou utiliser \textbf{(Action : Infos médicament)}. Il peut aussi créer des bombes, produits, cocktails molotovs, si besoin.
+  \item Gestion des foules(8) : Le personnage peut utiliser des armes à feu. Il possède aussi la compétence de calmer légèrement son entourage.
+  \item Charisme(9) : Le personnage a une bonne manipulation du langage. Il peut donc calmer (stress), motiver (courage) et limiter la perte de santé mentale de son entourage.
+  \item Électricité(4) : Le personnage peut manipuler toute sorte d'objet électrique (réseau, disjoncteur \textbf{(?)}, fusibles, etc.).
+  \item Cambriolage(5) : Le personnage peut crocheter tout type de serrure. Il possède un grand sens de la concentration et peut effectuer des tâches très précises. Il peut donc diminuer son risque d'échec critique.
+  \item Gestion de groupe(7) : Le personnage a une expérience de gestion de groupe et sait comment donner le meilleur d'un groupe. Il peut faire réaliser cela à son entourage et donc augmenter son altruisme (à l'entourage). Il a des connaissances très diverses et possède du bon sens. Il peut donc permettre au joueur d'avoir des conseils de bon sens sur la mission en cours \textbf{(Action : Conseil bon sens)}.
+  \item Bricoler(3) : Le personnage peut construire un objet élaboré à partir de deux éléments "atomiques" \textbf{(à voir pour l'implémentation de celui là ...)}.
+  \item Mélomanie(6) : Le personnage a une bonne expérience de la musique : il est très sensible au son. Il peut donc entendre les zombis depuis une plus grande distance.
+  \item Athlétisme(5) : Le personnage est habitué aux efforts physiques intenses : il gagne donc moins vite sa fatigue. De plus, il a en général de bonnes stats physique mais aussi en sensibilité.
+  \item Chasse(3) : Le personnage est habitué à la chasse, il peut donc traquer un zombi ou un PNJ. Il peut  aider le joueur à trouver la direction d'une cible vivante (zombi ou PNJ) \textbf{(Action : Traque direction cible)}. Il peut aussi être capable d'utiliser arc.
 \end{itemize}
 \subsection{Psychologie des personnages}
 Un personnage peut posséder plusieurs attributs qui influent sa manière de réagir indépendamment du contrôle du joueur. L'ensemble de ses attributs s'appelle la psychologie du personnage. Chaque personnage possède une valeur, comprise entre 0 et 9, pour chacun de ses attributs. Ces attributs sont :

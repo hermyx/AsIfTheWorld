@@ -3,9 +3,9 @@ Malgré que des caractéristiques, telles que le courage, peuvent varier au en f
 \subsection{Santé mentale}
 La santé mentale d'un personnage représente l'état mental du personnage. Lorsqu'il possède 100 de santé mentale, cela veut dire qu'il est parfaitement sain et est capable d'écouter sa raison du mieux possible, compte tenu de son environnement stressant (voir la section suivante, sur le stress).
 \\\\
-Un personnage perds sa santé mentale lorsqu'il se passe une action choquante dans son champ de vision. Sa perte de santé mentale correspond à la caractéristique Choc de l'action multiplié par la moitié de la sensibilité du personnage. Si le personnage fait cette action, il perds alors le choc de l'action multiplié par sa sensibilité.
+Un personnage perds sa santé mentale lorsqu'il se passe une action choquante dans son champ de vision. Sa perte de santé mentale correspond à la caractéristique Choc de l'action multiplié par la moitié de la sensibilité du personnage ainsi que par un coefficient BonusSM. Elle est notée PerteSM. BonusSM correspond au bonus au au malus de perte de Santé mentale. En général, la perte de santé mental vaut 5.
 \\\\
-Un personnage regagne sa santé mentale s'il ne voit pas d'actions choquantes pendant au moins 2 tours. Il regagne 5 points \textbf{(A équilibrer)} par tour où aucune action choquante ne se passe.
+Un personnage regagne sa santé mentale s'il ne voit pas d'actions choquantes pendant au moins 2 tours. Il regagne 5 points \textbf{(A équilibrer)} par tour où aucune action choquante ne se passe. Le gain est noté GainSM.
 \\\\
 Lorsqu'un personnage n'a plus de santé mentale, il part alors en "nervous breakdown" et n'écoute plus sa raison. Il ne peut plus être contrôlé par le joueur. Il peut avoir une réaction, parmi les réaction suivantes, de manière dépendante à ses caractéristiques :
 \begin{itemize}
@@ -80,7 +80,7 @@ Le stress diminue lorsque le personnage passe un tour sans faire d'action stress
 \subsection{Fatigue}
 La fatigue va influer la puissance d'attaque et la résistance défensive d'un personnage au combat.
 \\\\
-A chaque action, le personnage faisant cette action gagne un nombre de point de fatigue égal au nombre de points de Fatigue de cette action. Il perds ses points de fatigue en ne faisant soit aucune action par tour soit que des actions qui ont des points de fatigue nuls.
+A chaque action, le personnage faisant cette action gagne un nombre de point de fatigue égal au nombre de points de Fatigue de cette action + un bonus ou malus appelé BonusFatigue. Il perds ses points de fatigue en ne faisant soit aucune action par tour soit que des actions qui ont des points de fatigue nuls.
 \\\\
 Si la fatigue du personnage est maximale, il ne peut plus faire d'action jusqu'à ce que sa fatigue retombe sous 75\% de sa capacité initiale.
 \subsection{Bruit}
@@ -93,6 +93,8 @@ Le champ sonore d'un personnage diminue d'un points toutes les 2 tiles. Si un pe
    \item Sur les cases de portées 5-6, le champ sonore sera de 1.
 \end{itemize} 
 Un personnage, au repos, a un bruit de 1. S'il fait une action, il faut additionner son bruit initial au bruit de l'action pendant la durée du tour.
+\\\\
+Le champ sonore des humains et des zombis n'est, en revanche, pas cumulatif : Lors du calcul du bruit sur une tile, il n'est gardé que l'intensité la plus forte. Si les deux sont à égalité, alors il est gardé celle des personnages.
 \subsection{Mort d'un personnage}
 La mort d'un personnage peut avoir plusieurs conséquences dont celles-ci :
 \begin{itemize}

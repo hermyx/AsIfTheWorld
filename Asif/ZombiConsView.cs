@@ -5,9 +5,9 @@ using System.Text;
 
 namespace Asif
 {
-    public class CharacterConsView
+    public class ZombiConsView
     {
-        public Character Character
+        public ZombiControler ZombiControler
         {
             get
             {
@@ -18,7 +18,7 @@ namespace Asif
             }
         }
 
-        public CharacterControler CharacterControler
+        public Zombi Zombi
         {
             get
             {

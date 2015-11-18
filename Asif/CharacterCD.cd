@@ -5,24 +5,57 @@
     <Compartments>
       <Compartment Name="Properties" Collapsed="true" />
     </Compartments>
+    <AssociationLine Name="CharacterConsView" Type="Asif.CharacterConsView" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.75" Y="1.5" />
+        <Point X="3.125" Y="1.5" />
+        <Point X="3.125" Y="3" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>GAAAIAAAAAAAhACBBEBAAQADABlAAAAAQJAEAAABgAQ=</HashCode>
+      <HashCode>GAAAIAAAAAAAhACBBEFAAQADABlAAAAAQJAFAAABgAQ=</HashCode>
       <FileName>Character.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CharacterConsView" />
+      <Property Name="CharacterControler" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="Asif.CharacterControler">
-    <Position X="6.5" Y="2.5" Width="1.75" />
+    <Position X="7" Y="2.5" Width="1.75" />
+    <AssociationLine Name="Character" Type="Asif.Character" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.188" Y="2.5" />
+        <Point X="8.188" Y="1.375" />
+        <Point X="6.25" Y="1.375" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAIAAAAAAEAACAAAQAAAAAAAAAAAAEACAA=</HashCode>
       <FileName>CharacterControler.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Character" />
+      <Property Name="CharacterConsView" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="Asif.CharacterConsView">
-    <Position X="2.5" Y="2.5" Width="1.5" />
+    <Position X="2.25" Y="3" Width="1.75" />
+    <AssociationLine Name="Character" Type="Asif.Character" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.417" Y="3" />
+        <Point X="3.417" Y="1.875" />
+        <Point X="4.75" Y="1.875" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAACAA=</HashCode>
       <FileName>CharacterConsView.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Character" />
+      <Property Name="CharacterControler" />
+    </ShowAsAssociation>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

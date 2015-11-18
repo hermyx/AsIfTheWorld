@@ -30,7 +30,7 @@
   <Class Name="Asif.Zombi">
     <Position X="4.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAgAAABAAAAAAAAIgAAAAAAQAAAAABkAA=</HashCode>
+      <HashCode>CAAAAAAAAAAAgAAABAAAAAAAAIgAAAAAAQAABAABkAA=</HashCode>
       <FileName>Zombi.cs</FileName>
     </TypeIdentifier>
   </Class>

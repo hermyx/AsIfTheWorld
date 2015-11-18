@@ -53,10 +53,13 @@
     <Compile Include="Relation.cs" />
     <Compile Include="Tile.cs" />
     <Compile Include="Zombi.cs" />
+    <Compile Include="ZombiConsView.cs" />
+    <Compile Include="ZombiControler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="CharacterCD.cd" />
+    <None Include="ZombiCD.cd" />
     <None Include="MainCD.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
