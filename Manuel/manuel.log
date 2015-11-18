@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.11.10)  17 NOV 2015 04:29
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.11.10)  18 NOV 2015 14:51
 entering extended mode
 **manuel.tex
 (D:\gitrepo\AsIfTheWorld\Manuel\manuel.tex
@@ -638,45 +638,45 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--21
 [2
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 46--51
+Underfull \hbox (badness 10000) in paragraph at lines 52--57
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--51
+Underfull \hbox (badness 10000) in paragraph at lines 52--57
 
  []
 
 ) (D:\gitrepo\AsIfTheWorld\Manuel\persos.tex [3] [4
 
 ] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 55--59
+Underfull \hbox (badness 10000) in paragraph at lines 56--60
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 72--77
+Underfull \hbox (badness 10000) in paragraph at lines 73--78
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--77
+Underfull \hbox (badness 10000) in paragraph at lines 73--78
 
  []
 
 ) (D:\gitrepo\AsIfTheWorld\Manuel\zombis.tex [7] [8])
 (D:\gitrepo\AsIfTheWorld\Manuel\combats.tex
-Underfull \hbox (badness 10000) in paragraph at lines 64--1
+Underfull \hbox (badness 10000) in paragraph at lines 70--1
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--1
+Underfull \hbox (badness 10000) in paragraph at lines 70--1
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--1
+Underfull \hbox (badness 10000) in paragraph at lines 70--1
 
  []
 
@@ -795,8 +795,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 87--90
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--98
+
+ []
+
 [14]
-Overfull \hbox (44.04231pt too wide) in paragraph at lines 99--100
+Overfull \hbox (44.04231pt too wide) in paragraph at lines 101--102
 []\T1/cmr/m/n/10 Santé men-tale : Tous les per-son-nages dans l'entourage du pe
 r-son-nage mort per-dent X=ArrSup(10*(Sensibilité/3))
  []
@@ -849,22 +854,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 44.
 (D:\gitrepo\AsIfTheWorld\Manuel\manuel.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 44.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 44.
-
-
-Package rerunfilecheck Warning: File `manuel.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `manuel.out':
-(rerunfilecheck)             Before: 15A0F42BF6E6A49E48B102EA5D20BDE7;4263
-(rerunfilecheck)             After:  751FDD9C1B2157BA08512FA22EA96EF3;4347.
+Package rerunfilecheck Info: File `manuel.out' has not changed.
+(rerunfilecheck)             Checksum: 751FDD9C1B2157BA08512FA22EA96EF3;4347.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 44.
  ) 
 Here is how much of TeX's memory you used:
- 7188 strings out of 493921
- 101528 string characters out of 3144872
+ 7189 strings out of 493921
+ 101545 string characters out of 3144872
  194542 words of memory out of 3000000
- 10275 multiletter control sequences out of 15000+200000
+ 10276 multiletter control sequences out of 15000+200000
  13115 words of font info for 34 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  29i,6n,32p,906b,460s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -877,9 +875,9 @@ iKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1200.pk> <C:\Users\Hermyx\AppD
 ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\
 Hermyx\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1728.pk>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on manuel.pdf (22 pages, 191592 bytes).
+Output written on manuel.pdf (22 pages, 192855 bytes).
 PDF statistics:
- 726 PDF objects out of 1000 (max. 8388607)
+ 729 PDF objects out of 1000 (max. 8388607)
  88 named destinations out of 1000 (max. 500000)
- 513 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 521 words of extra memory for PDF output out of 10000 (max. 10000000)
 
